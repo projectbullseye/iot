@@ -1,0 +1,8 @@
+[Unit]
+Description=IoT Laas Client Service
+
+[Service]
+ExecStart=/home/pi/start_at_boot/startiot_laas.sh
+
+[Install]
+WantedBy=multi-user.target
