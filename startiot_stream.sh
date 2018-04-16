@@ -1,2 +1,13 @@
-#!/bin/sh
-/home/pi/RTKLIB/app/str2str/gcc/str2str -in serial://ttyACM0:230400:N:1#ubx -out tcpsvr://:5019#rtcm3>> /tmp/stream.log
+#!/bin/bash
+STATE="error"
+
+while [ $STATE == "error" ]
+do
+    #do a ping and check that its not a default message or change to grep for something else
+    STATE=$(ping -q -w 1 -c 1 `ip r | grep default | cut -d ' ' -f 3` > /dev/null && echo ok || echo error)
+
+    #sleep for 2 seconds and try again
+    sleep 2
+ done
+
+/home/pi/start_at_boot/str2str -in serial://Ublox:230400:N:1#ubx -out tcpsvr://:5019#rtcm3 >>/tmp/bullseyelogs/stream.log
