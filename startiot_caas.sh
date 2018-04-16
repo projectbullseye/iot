@@ -10,4 +10,4 @@ do
     sleep 2
  done
 
-/home/pi/rtk/RTKLIB/app/rtkrcv/gcc/rtkrcv -s -p 6060 -o /home/pi/rtk/RTKLIB/app/rtkrcv/gcc/rtkrcv.conf -t 5
+/home/pi/start_at_boot/rtkrcv -s -p 6060 -o /home/pi/start_at_boot/rtkrcv.conf -t 5
