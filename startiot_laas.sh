@@ -12,5 +12,5 @@ do
     sleep 2
  done
 
-java -jar /home/pi/start_at_boot/iotclient.jar 127.0.0.1 5019 https://www.mapquestapi.com/oauth/token RDtHEggbxGd3gWUx7o4sV1ZQxzXvMpYF k2PHauma2cx4llUr mapquest 71.115.19.60 2300 true 71.115.19.60 2400 Sumanthiot >>/tmp/bullseyelogs/iot.log
+java -jar /home/pi/start_at_boot/iotclient.jar 127.0.0.1 5019 https://www.mapquestapi.com/oauth/token RDtHEggbxGd3gWUx7o4sV1ZQxzXvMpYF k2PHauma2cx4llUr mapquest dev.caas.hyperlocation.io 2300 true 54.204.225.205 2400 testuser >>/tmp/bullseyelogs/iot.log
 
