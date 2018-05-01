@@ -1,0 +1,8 @@
+[Unit]
+Description=All IoT Specific Services
+
+[Service]
+ExecStart=/home/pi/start_at_boot/startiot_stream_serial.sh
+
+[Install]
+WantedBy=multi-user.target
