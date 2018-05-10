@@ -33,12 +33,16 @@ chmod 755 /home/pi/start_at_boot/rtkrcv.conf
  
 
 #Create services to start on boot.
-systemctl enable iotstream
+systemctl enable iotstream_serial
 systemctl enable iotlaas
 systemctl enable iotcaas
 
 #Start services
-systemctl start iotstream
+systemctl start iotstream_serial
 systemctl start iotlaas
 systemctl start iotcaas
+
+#Disable console on serial port
+systemctl stop serial-getty@ttyS0.service
+systemctl disable serial-getty@ttyS0.service
 
