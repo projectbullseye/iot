@@ -21,6 +21,8 @@ cp /home/pi/bullseye/rtkrcv /home/pi/start_at_boot/
 cp /home/pi/bullseye/iotclient.jar /home/pi/start_at_boot/
 cp /home/pi/bullseye/rtkrcv.conf /home/pi/start_at_boot/
 cp /home/pi/bullseye/99-usb-serial.rules /etc/udev/rules.d/
+cp /home/pi/bullseye/verizon /etc/ppp/peers/
+cp /home/pi/bullseye/vzw-chat /etc/ppp/peers/
 
 #Mod permissions to files for execution
 chmod 755 /home/pi/start_at_boot/str2str
@@ -31,6 +33,8 @@ chmod 755 /home/pi/start_at_boot/startiot_laas.sh
 chmod 755 /home/pi/start_at_boot/startiot_caas.sh
 chmod 755 /home/pi/start_at_boot/rtkrcv.conf
 chmod 755 /etc/udev/rules.d/
+chmod 755 /etc/ppp/peers/verizon
+chmod 755 /etc/ppp/peers/vzw-chat
 
 #Create services to start on boot.
 systemctl enable iotstream
